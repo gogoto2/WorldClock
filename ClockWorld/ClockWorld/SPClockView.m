@@ -31,20 +31,27 @@
 
 - (void)timerFired:(id)sender
 {
-    _time = [NSDate date];
-    static NSCalendar *gregorian;
-    
-    if (!gregorian) gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setTimeZone:_timeZone]; // Japan
-    NSDateComponents *weekdayComponents =
-    [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:_time];
-    
-    self.hours = [weekdayComponents hour];
-    self.minutes = [weekdayComponents minute];
-    self.seconds = [weekdayComponents second];
-    
-    self.text = [NSString stringWithFormat:@"%ld:%ld:%ld",(long)self.hours,(long)self.minutes,(long)self.seconds];
-    
+    @try {
+        _time = [NSDate date];
+        static NSCalendar *gregorian;
+        
+        if (!gregorian) gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        [gregorian setTimeZone:_timeZone]; // Japan
+        NSDateComponents *weekdayComponents =
+        [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:_time];
+        
+        self.hours = [weekdayComponents hour];
+        self.minutes = [weekdayComponents minute];
+        self.seconds = [weekdayComponents second];
+        
+        self.text = [NSString stringWithFormat:@"%ld:%ld:%ld",(long)self.hours,(long)self.minutes,(long)self.seconds];
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
 }
 
 - (void)setTimeZone:(NSTimeZone *)timeZone
@@ -216,23 +223,32 @@
 
 - (void)timerFired:(id)sender
 {
-    _time = [NSDate date];
-    static NSCalendar *gregorian;
-    
-    if (!gregorian) gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [gregorian setTimeZone:_timeZone]; // Japan
-    NSDateComponents *weekdayComponents =
-    [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:_time];
-    
-    self.hours = [weekdayComponents hour];
-    BOOL isDay = (self.hours > 6 && self.hours < 18);
-    [self setAsDay:isDay];
-    if (self.hours > 12) self.hours -= 12;
-    
-    self.minutes = [weekdayComponents minute];
-    self.seconds = [weekdayComponents second];
-    
-    [self setNeedsDisplay];
+    @try {
+        _time = [NSDate date];
+        static NSCalendar *gregorian;
+        
+        if (!gregorian) gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        [gregorian setTimeZone:_timeZone]; // Japan
+        NSDateComponents *weekdayComponents =
+        [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:_time];
+        
+        self.hours = [weekdayComponents hour];
+        BOOL isDay = (self.hours > 6 && self.hours < 18);
+        [self setAsDay:isDay];
+        if (self.hours > 12) self.hours -= 12;
+        
+        self.minutes = [weekdayComponents minute];
+        self.seconds = [weekdayComponents second];
+        
+        [self setNeedsDisplay];
+
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+        
+    }
 }
 
 - (void)setTimeZone:(NSTimeZone *)timeZone
