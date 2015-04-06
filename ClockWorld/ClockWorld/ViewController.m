@@ -49,10 +49,51 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
-    self.title = @"SPClockView";
+    self.title = @"WorldClock";
     _tableView.contentInset = UIEdgeInsetsMake(120, 0, 0, 0);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTimeZone:)];
+
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, 70)];
+    _adBanner.delegate = self;
 }
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!_bannerIsVisible)
+    {
+        // If banner isn't part of view hierarchy, add it
+        if (_adBanner.superview == nil)
+        {
+            [self.view addSubview:_adBanner];
+        }
+        
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        
+        // Assumes the banner view is just off the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = YES;
+    }
+}
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"Failed to retrieve ad");
+    
+    if (_bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        
+        // Assumes the banner view is placed at the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = NO;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
