@@ -10,18 +10,14 @@
 	<string>ClockWorld</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4A8798696224D35F66B33D8759F0DC8601CA4943</key>
-		<string>https://github.com/phoenixit99/woking.git</string>
-		<key>d68e2912-b809-d494-c385-ce57b7db7bff++505</key>
+		<key>A942FB8CFCE4884C5C8E4FABDFFA9D696281509D</key>
 		<string>https://github.com/phoenixit99/WorldClock.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ClockWorld/ClockWorld.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4A8798696224D35F66B33D8759F0DC8601CA4943</key>
-		<string>../../../..</string>
-		<key>d68e2912-b809-d494-c385-ce57b7db7bff++505</key>
+		<key>A942FB8CFCE4884C5C8E4FABDFFA9D696281509D</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -29,22 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>d68e2912-b809-d494-c385-ce57b7db7bff++505</string>
+	<string>A942FB8CFCE4884C5C8E4FABDFFA9D696281509D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4A8798696224D35F66B33D8759F0DC8601CA4943</string>
-			<key>IDESourceControlWCCName</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>d68e2912-b809-d494-c385-ce57b7db7bff++505</string>
+			<string>A942FB8CFCE4884C5C8E4FABDFFA9D696281509D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WorldClock</string>
 		</dict>

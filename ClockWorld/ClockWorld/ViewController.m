@@ -38,7 +38,6 @@
     _timeZones = [NSMutableArray new];
     // add current time zone
     [_timeZones addObject:[NSTimeZone localTimeZone]];
-    
     self.timeZoneTableViewVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
     self.timeZoneTableViewVC.tableView.dataSource = self;
     self.timeZoneTableViewVC.tableView.delegate = self;
@@ -50,7 +49,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
     self.title = @"WorldClock";
-    _tableView.contentInset = UIEdgeInsetsMake(120, 0, 0, 0);
+    _tableView.contentInset = UIEdgeInsetsMake(50, 0, 0, 0);
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTimeZone:)];
 
     _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, 70)];

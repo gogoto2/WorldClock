@@ -38,7 +38,7 @@
         if (!gregorian) gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         [gregorian setTimeZone:_timeZone]; // Japan
         NSDateComponents *weekdayComponents =
-        [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:_time];
+        [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
         
         self.hours = [weekdayComponents hour];
         self.minutes = [weekdayComponents minute];
@@ -230,7 +230,7 @@
         if (!gregorian) gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         [gregorian setTimeZone:_timeZone]; // Japan
         NSDateComponents *weekdayComponents =
-        [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:_time];
+        [gregorian components:(NSDayCalendarUnit | NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
         
         self.hours = [weekdayComponents hour];
         BOOL isDay = (self.hours > 6 && self.hours < 18);

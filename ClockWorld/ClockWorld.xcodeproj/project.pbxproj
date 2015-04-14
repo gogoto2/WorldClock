@@ -235,6 +235,7 @@
 				TargetAttributes = {
 					7562D7A51AC9324E00174135 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 5X53VEL6YA;
 					};
 					7562D7BE1AC9324F00174135 = {
 						CreatedOnToolsVersion = 6.1;
@@ -422,12 +423,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Minh Tien (K59JYJSW56)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Minh Tien (K59JYJSW56)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Minh Tien (YD3QN6EF5E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Minh Tien (YD3QN6EF5E)";
 				INFOPLIST_FILE = ClockWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d2dda82a-93a4-4e7f-8e6a-2cf0c532d6dd";
 			};
 			name = Debug;
 		};
@@ -436,12 +438,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Minh Tien (K59JYJSW56)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Minh Tien (K59JYJSW56)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Minh Tien (YD3QN6EF5E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Minh Tien (YD3QN6EF5E)";
 				INFOPLIST_FILE = ClockWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d2dda82a-93a4-4e7f-8e6a-2cf0c532d6dd";
 			};
 			name = Release;
 		};
